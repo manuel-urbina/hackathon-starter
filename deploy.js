@@ -65,7 +65,7 @@ function stopRemoteServices() {
 // updates the project source on the server
 function updateRemoteApp() {
   return ssh.execCommand(
-    'mkdir hackathon-starter && cp -r hackathon-starter-temp/* hackathon-starter/ && rm -rf hackathon-starter-temp', {
+    'cp -r hackathon-starter-temp/* hackathon-starter/ && rm -rf hackathon-starter-temp', {
       cwd: '/home/ubuntu'
   });
 }
@@ -85,7 +85,7 @@ function sshConnect() {
   ssh
     .connect({
       // TODO: ADD YOUR IP ADDRESS BELOW (e.g. '12.34.5.67')
-      host: '100.26.122.45',
+      host: '54.236.47.210',
       username: 'ubuntu',
       privateKey: 'hs-key.pem'
     })
